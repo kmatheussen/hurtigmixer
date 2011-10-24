@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+
+
+# gimp function for printing the current selection rectangle (To start console: filters->script-fu->console)):
+# (define (curr-sel) (let ((s (gimp-selection-bounds 1))) (list (cadr s) (caddr s) (- (cadddr s) (cadr s)) (- (list-ref s 4) (caddr s)))))
+
+
+
+# 4 seconds minimum
+shortest-duration 9
+
+#background-image background_help.png
+#background-image background_new.png
+background-image melodimaker_interface5.png
+
+# background-image-pos is used to specify which part of the background image to show
+# This entry must be specified at the top!
+# arg1: x pos in the image
+# arg2: y pos in the image
+# arg3: width of the image
+# arg4: height of the image
+background-image-pos 249 155 901 518
+
+
+# width and height is the width and height of the window. (It is not supposed to
+# be exactly the same size as the background-image, but in case the background
+# image size is changed, the values below might have to be tweaked a bit).)
+#width           1916
+#height          1550
+width           906
+height          540
+
+
+# link-text: Add a link by drawing text
+#
+# arg1: Name of link
+# arg2: x pos
+# arg3: y pos
+# arg4: font width
+# arg5: font height
+# arg6: red value
+# arg7: green value
+# arg8: blue value
+# arg6: URL
+#link-text Drivhuset.no 847 36 10 12 0.1 0.6 0.2 http://drivhuset.musikkverksted.no/
+
+
+# link: Add a link by drawing a picture
+#
+# arg1: Name of picture file
+# arg2: x pos
+# arg3: y pos
+# arg4: URL
+#link link.png  847 136 http://www.notam02.no
+
+
+# link-area: Add a link just by telling where to press the mouse.
+#            (In case the position of the link is drawn in the background picture)
+#
+# arg1: x pos
+# arg2: y pos
+# arg3: width
+# arg4: height
+# arg5: URL
+#link-area 0 0 200 100 http://www.donald.no
+
+
+
+
+# 
+# All of the values below are in the following format:
+# arg1: x pos
+# arg2: y pos
+# arg3: width
+# arg4: height
+#
+# Many of them can be removed just by replacing "<x> <y> <width> <height>" with "0"
+# For example, to remove the play button, change the play line to: "play 0".
+#
+
+tempo-area           304 172 664 57 Her setter du tempo
+melodigenerator-area  261 253 708 207 Venstre musknapp legger til lyd, høyre musknapp tar vekk lyd.\n \FTriks: Bruk rulleknapp for enkelt å starte og stoppe avspilling.
+
+#pitchspeed-area     712 552 237 111 Her setter du tonehøyde og tempo
+#pitchspeed-area     721 563 194 77  Her setter du tonehøyde og tempo
+pitchspeed-area     711 544 240 115  Her setter du tonehøyde og tempo.\n\n Trykk høyre musknapp for å resette.
+scaleselect-area    414 572 286 82  Her setter du skala.\n\n Trykk på tonenavnet under for å forandre grunntone i skalaen.
+#scaleselect-area    483 573 222 82  Her setter du skala
+reverb-slider       1046 629 77 21 Her setter du klang
+volume-slider       1046 562 77 21 Her setter du volum
+#notelen-slider      1 571 82 17 Her setter du note-lengde
+
+shake-button          262 493 116 30 Puff lydene!
+play-button           601 484 47 47 Spill!
+stop-button           649 483 49 48 Stopp!
+gen-button           990 169 150 29 Generer ny melodi!
+invert-button         383 493 99 30 Opp ned!
+reverse-button        487 493 106 30 Baklengs!
+glissando-button      705 492 128 31 Glidende overganger
+
+moll-button         266 569 57 21 Moll-skala!
+dur-button          331 569 63 21 Dur-skala!
+heltone-button      266 590 57 21 Heltone-skala!
+dim-button          331 589 63 21 Dim-skala!
+arabisk-button      266 610 57 21 Arabisk skala!
+blues-button        331 610 63 21 Blues-skala!
+kromatisk-button    265 631 75 22 Kromatisk skala!
+fri-button          349 631 42 24 Ingen skala!
+
+reset-button        990 203 150 29 Tøm
+save-button         989 431 154 27 Lagre lydfil eller midi-fil
+random-button       837 493 155 31 Tilfeldige toner
+unrandom-button     994 492 152 31 Ta vekk tilfeldige toner
+
+#message-area   1 605 115 11
+#progress-bar 120 605 115 21
+
+help-area   989 284 155 141 Velkommen til melodimaker! Start ved å tegne lyder til venstre og trykk avspillings- knappen for å høre det du lager.
+
+
+
+#
+# Sound selector buttons (max 4!)
+#
+# arg1: x position
+# arg2: y position
+# arg3: width
+# arg4: height
+# arg5: Name of instrument
+# arg6: Icon
+# arg7: Sound file
+# arg8: Note for sound file when played at 44100Hz
+# arg9: red value in pianoroll (0-100)
+# arg10: green value in pianoroll (0-100)
+# arg11: blue value in pianoroll (0-100)
+
+sound-selector-button 958 563 72 22 Gitar   singing.png jack_capture_04.mp3   18   30 60 90 Dette er lydpaletten.\n\n Velg lyd med venstre musknapp. \FTrykk høyre musknapp for å laste opp din egen lyd.
+
+sound-selector-button 958 588 72 22 Bass    piano.png   jack_capture_03.mp3   42   60 90 10 Dette er lydpaletten.\n\n Velg lyd med venstre musknapp. \FTrykk høyre musknapp for å laste opp din egen lyd.
+
+sound-selector-button 958 613 72 22 Orkest. singing.png jack_capture_01.mp3   30   90 10 60 Dette er lydpaletten.\n\n Velg lyd med venstre musknapp. \FTrykk høyre musknapp for å laste opp din egen lyd.
+
+sound-selector-button 958 638 72 22 Krystal piano.png   jack_capture_02.mp3   30   90 70 20 Dette er lydpaletten.\n\n Velg lyd med venstre musknapp. \FTrykk høyre musknapp for å laste opp din egen lyd.
+
+
+
+
+
+#
+# Various variables below.
+#
+
+keyboard-width 42
+
+lower-note 12
+upper-note 46
+
+paint-cursor brush.png
+erase-cursor delete.png
+

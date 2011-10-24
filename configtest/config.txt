@@ -1,0 +1,47 @@
+
+link link.png  847 136 http://www.notam02.no
+
+background-image background_help.png
+
+# width and height is the width and height of the window. It is not supposed to
+# be exactly the same size as the background-image.
+width          1000
+height          625
+
+add-sound      102 428 40 15
+
+save-local     879 206 68 24
+save-server    0 880 294 65 25
+
+message-area   858 335 115 11
+progress-bar   858 347 115 21
+
+stop           176 522 39 39
+play           219 522 39 39
+undo           262 522 18 18
+redo           283 522 18 18
+rewind         262 543 39 18
+loop-on        176 564 18 16
+loop-off       197 564 18 16
+reset          219 564 39 16
+trim           262 564 39 16
+
+srate-slider   307 533 110  16
+size-slider    307 564 110  16
+volume-slider  422 522  18  58
+
+# The volume meter area.
+vu-area        446 522  18  58
+
+musikkverksted 12  70 141 168
+min-lydhylle   12 245 141 168
+min-datamaskin 12 420 141 168
+
+top-sounds     171 0 655 49
+
+miniature-area 482 510 349 84
+timebar        187 68 621 20
+
+mixer-area     187 91 621 392
+
+

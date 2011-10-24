@@ -1,0 +1,134 @@
+
+# 4 seconds minimum
+shortest-duration 9
+
+#background-image background_help.png
+background-image background.png
+
+
+# width and height is the width and height of the window. (It is not supposed to
+# be exactly the same size as the background-image, but in case the background
+# image size is changed, the values below might have to be tweaked a bit).)
+width           668
+height          720
+
+
+# link-text: Add a link by drawing text
+#
+# arg1: Name of link
+# arg2: x pos
+# arg3: y pos
+# arg4: font width
+# arg5: font height
+# arg6: red value
+# arg7: green value
+# arg8: blue value
+# arg6: URL
+#link-text Drivhuset.no 847 36 10 12 0.1 0.6 0.2 http://drivhuset.musikkverksted.no/
+
+
+# link: Add a link by drawing a picture
+#
+# arg1: Name of picture file
+# arg2: x pos
+# arg3: y pos
+# arg4: URL
+#link link.png  847 136 http://www.notam02.no
+
+
+# link-area: Add a link just by telling where to press the mouse.
+#            (In case the position of the link is drawn in the background picture)
+#
+# arg1: x pos
+# arg2: y pos
+# arg3: width
+# arg4: height
+# arg5: URL
+#link-area 0 0 200 100 http://www.donald.no
+
+
+
+
+# 
+# All of the values below are in the following format:
+# arg1: x pos
+# arg2: y pos
+# arg3: width
+# arg4: height
+#
+# Many of them can be removed just by replacing "<x> <y> <width> <height>" with "0"
+# For example, to remove the play button, change the play line to: "play 0".
+#
+
+tempo-area           51   1 581  56 her setter du tempo
+melodigenerator-area  1  70 641 420 Venstre musknapp legger til lyd, hoeyre musknapp tar vekk lyd
+pitchspeed-area     493 512 160 79 her setter du tonehøyde og tempo
+scaleselect-area    130 512 350 79 her setter du skala
+reverb-slider       106 512 17 79 her setter du klang
+volume-slider        86 512 17 79 her setter du volum
+notelen-slider        1 571 82 17 her setter du note-lengde
+
+shake-button          1 500 82 10 puff lydene!
+play-button           1 512 82 10 play/stop
+gen-button            1 524 82 10 generer ny melodi!
+invert-button         1 536 82 10 Opp ned!
+reverse-button        1 548 82 10 Baklengs!
+glissando-button      1 560 82 10 Glidende overganger
+
+weigh-button          1 590 75 10 Vekting av noter
+dur-button           80 590 75 10 Dur-skala!
+heltone-button      160 590 75 10 Heltone-skala!
+dim-button          240 590 75 10 Dim-skala!
+arabisk-button      320 590 75 10 Arabisk skala!
+blues-button        400 590 75 10 Blues-skala!
+kromatisk-button    480 590 75 10 Kromatisk skala!
+fri-button          560 590 75 10 Ingen skala!
+
+reset-button          1   1 40 10 Tøm
+save-button           1  15 40 10 Lagre lydfil
+random-button         1  30 40 10 Tilfeldige toner
+unrandom-button       1  45 40 10 Ta vekk tilfeldige toner
+
+message-area   1 605 115 11
+progress-bar 120 605 115 21
+
+help-area 1 660 800 40 Her er det hjelp aa faa, kanskje.
+
+
+
+#
+# Sound selector buttons
+#
+# arg1: Picture to use when selected
+# arg2: Picture to use when not selected
+# arg3: Sound file
+# arg4: Note for sound file when played at 44100Hz
+# arg5: x position
+# arg6: y position
+# arg7: red value in pianoroll (0-100)
+# arg8: green value in pianoroll (0 100)
+# arg9: blue value in pianoroll (0 100)
+
+sound-selector-button    piano_sel.jpg  piano_unsel.jpg   piano.wav.mp3 24    250 605    0 100   0
+
+sound-selector-button    singer_sel.jpg singer_unsel.jpg  choir2.ogg    24    300 605    0   0 100
+
+
+
+#
+# Various variables below.
+#
+
+keyboard-width 50
+
+lower-note 20
+upper-note 40
+
+# ogg/flac/wav/mp3
+soundfile piano.wav.mp3
+
+#soundfile is a C, fourth octave, when played at 44100Hz. (12 * 2 = 24)
+soundfile-note 24
+
+paint-cursor paint.png
+erase-cursor erase.png

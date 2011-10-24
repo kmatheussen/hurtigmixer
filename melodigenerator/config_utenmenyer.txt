@@ -1,0 +1,81 @@
+
+# 4 seconds minimum
+shortest-duration 4
+
+background-image background_help.png
+
+
+# width and height is the width and height of the window. It is not supposed to
+# be exactly the same size as the background-image.
+width          1000
+height          625
+
+
+
+# arg1: Name of link
+# arg2: x pos
+# arg3: y pos
+# arg4: font width
+# arg5: font height
+# arg6: red
+# arg7: green
+# arg8: blue
+# arg6: URL
+link-text Drivhuset.no 847 36 10 12 0.1 0.6 0.2 http://drivhuset.musikkverksted.no/
+
+
+# arg1: Name of picture file
+# arg2: x pos
+# arg3: y pos
+# arg4: URL
+link link.png  847 136 http://www.notam02.no
+
+
+# arg1: x pos
+# arg2: y pos
+# arg3: width
+# arg4: height
+# arg5: URL
+link-area 0 0 200 100 http://www.donald.no
+
+
+
+
+add-sound      0
+save-server    0
+musikkverksted 0
+min-lydhylle   0
+min-datamaskin 0
+
+
+save-local     879 206 68 24
+
+
+message-area   858 335 115 11
+progress-bar   858 347 115 21
+
+play           176 522 39 39
+stop           219 522 39 39
+undo           262 522 18 18
+redo           283 522 18 18
+rewind         262 543 39 18
+loop-on        176 564 18 16
+loop-off       197 564 18 16
+reset          219 564 39 16
+trim           262 564 39 16
+
+srate-slider   307 533 110  16
+size-slider    307 564 110  16
+volume-slider  422 522  18  58
+
+# The volume meter area.
+vu-area        446 522  18  58
+
+top-sounds     171 0 655 49
+
+miniature-area 482 510 349 84
+timebar        187 68 621 20
+
+mixer-area     187 91 621 392
+
+
