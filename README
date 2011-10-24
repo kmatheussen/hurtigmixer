@@ -6,5 +6,9 @@ Programmed by Kjetil Matheussen.
 
 Languages used: SISC Scheme and Java.
 
-Try the program at:
+Try both Hurtigmixer and Melodigenerator at:
 http://www.musikkverksted.no
+
+Also try DSP, which uses the soundengine in src/soundengine/
+http://www.musikkverksted.no
+
